@@ -320,26 +320,36 @@ main .works .portfolios .portfolio-site div img {
 main .works .portfolios .portfolio-site div img:hover {
   opacity: .2;
 }
-main .works .portfolios .portfolio-site div a{
+main .works .portfolios .portfolio-site div div {
   width: 160px;
-  height: 60px;
   position: absolute;
   top: 50%;
   left: 50%;
   translate: -50%;
-  color: #fff;
   border: 2px solid #fff;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
+  z-index: 3;
   transition: opacity .3s;
-  z-index: 2;
+  overflow: hidden;
 }
-main .works .portfolios .portfolio-site div img:hover + a{
+main .works .portfolios .portfolio-site div div a {
+  width: 100%;
+  display: block;
+  padding: 16px 0;
+  color: #fff; 
+}
+main .works .portfolios .portfolio-site div div:hover {
+  opacity: 1;
+  pointer-events: all;
+}
+main .works .portfolios .portfolio-site div div:hover {
+  background: rgba(0, 0, 0, .5);
+}
+main .works .portfolios .portfolio-site div img:hover + div:has(a) {
   opacity: 1;
   pointer-events: all;
 }
